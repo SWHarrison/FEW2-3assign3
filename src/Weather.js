@@ -1,4 +1,7 @@
 import React from 'react'
+import Temperature from './Temperature'
+import Atmosphere from './Atmosphere'
+import WeatherDesc from './WeatherDesc'
 
 function Weather(props) {
 
@@ -9,13 +12,9 @@ function Weather(props) {
 
   return (
     <div>
-      <div>Title: {main}</div>
-      <div>Desc: {description}</div>
-      <div>Icon: {icon}</div>
-      <div>Temp: {temp}</div>
-      <div>Pressure: {pressure}</div>
-      <div>Humidity: {humidity}</div>
-      <div>Temp Min: {temp_min} Max:{temp_max}</div>
+      <WeatherDesc main = {main} description = {description}/>
+      <Temperature temp = {temp} temp_min = {temp_min} temp_max = {temp_max}/>
+      <Atmosphere pressure = {pressure} humidity = {humidity}/>
     </div>
   )
 }
